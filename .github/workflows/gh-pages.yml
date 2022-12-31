@@ -26,7 +26,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: amania
+          deploy_key: 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
           external_repository: amania-jailbreak/amania-jailbreak.github.io
           publish_branch: master
           cname: www.amania-tools.com
