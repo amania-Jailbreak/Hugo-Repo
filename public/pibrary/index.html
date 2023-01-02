@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='お知らせ'><title>Notification</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='PibraryとはPythonで作成されたビルドされていないOSSソフトウェアを動かすためのソフトになります Pibraryを使用すれば
+Pythonでビルド(exeにコンパイル)などをせずに配布することができます Pythonの仮想環境もどきが作れます(アプリケーションごとに環境が生成されその中にモジュールがインストールされます 仮想環境のみでは使用できません) PibraryにはPython3.10 pipが同梱されておりモジュールは標準の状態から手を加えておらず Pibraryに必要なモジュールは別の場所に隔離されていますのでPythonにほかのモジュールはインストールされていません
+仕組み PibraryはEelとElectronによって実現しています .pa拡張子をアプリ内で指定しインストールするとpaの中にあるtxtファイルからモジュールをそのアプリ専用のフォルダにインストールしアプリを実行するときはそこからモジュールをインポートするように指定しますインストールしたフォルダ内にあるmain.pyのmain関数を実行します(main関数はなくても大丈夫ですがPibrary内部でエラーが発生します 支障はありません) (Pibrary本体もビルドされていないため簡略化した方法で同じように起動します)
+paファイル Pibraryにpaファイルを使用してアプリケーションをインストールします
+1 2 3 4 [appname].pa |- [app-identifier] (appfoldername) |- appinfo.ini (App information) |- requirements.txt (Required modules) このようなフォルダ構造になっておりapp-identifierにはappinfoに記述したidentifierと同じ名前にします この中にアプリ本体を配置しモジュールとアプリ情報を記載しzip形式で圧縮して.pa拡張子にします
+appinfo.ini Pibraryがアプリを管理するためにインストール時に読み取る情報が書かれているファイルです
+1 2 3 4 5 6 [識別子] name = アプリ名 developer = 開発者名 description = 詳細 icon = iconURL identifier = 識別子 Download Pibrary public beta(PB) Download Ver 1.0PB
+Pibrary stable しばらくお待ちください'><title>Pibrary</title>
 
-<link rel='canonical' href='https://www.amania-tools.com/notification/'>
+<link rel='canonical' href='https://www.amania-tools.com/pibrary/'>
 
-<link rel="stylesheet" href="/scss/style.min.269bd65a68c3c41a12b13f9dca6dab513c03667fb07820f55fb410a92b025cbf.css"><meta property='og:title' content='Notification'>
-<meta property='og:description' content='お知らせ'>
-<meta property='og:url' content='https://www.amania-tools.com/notification/'>
+<link rel="stylesheet" href="/scss/style.min.269bd65a68c3c41a12b13f9dca6dab513c03667fb07820f55fb410a92b025cbf.css"><meta property='og:title' content='Pibrary'>
+<meta property='og:description' content='PibraryとはPythonで作成されたビルドされていないOSSソフトウェアを動かすためのソフトになります Pibraryを使用すれば
+Pythonでビルド(exeにコンパイル)などをせずに配布することができます Pythonの仮想環境もどきが作れます(アプリケーションごとに環境が生成されその中にモジュールがインストールされます 仮想環境のみでは使用できません) PibraryにはPython3.10 pipが同梱されておりモジュールは標準の状態から手を加えておらず Pibraryに必要なモジュールは別の場所に隔離されていますのでPythonにほかのモジュールはインストールされていません
+仕組み PibraryはEelとElectronによって実現しています .pa拡張子をアプリ内で指定しインストールするとpaの中にあるtxtファイルからモジュールをそのアプリ専用のフォルダにインストールしアプリを実行するときはそこからモジュールをインポートするように指定しますインストールしたフォルダ内にあるmain.pyのmain関数を実行します(main関数はなくても大丈夫ですがPibrary内部でエラーが発生します 支障はありません) (Pibrary本体もビルドされていないため簡略化した方法で同じように起動します)
+paファイル Pibraryにpaファイルを使用してアプリケーションをインストールします
+1 2 3 4 [appname].pa |- [app-identifier] (appfoldername) |- appinfo.ini (App information) |- requirements.txt (Required modules) このようなフォルダ構造になっておりapp-identifierにはappinfoに記述したidentifierと同じ名前にします この中にアプリ本体を配置しモジュールとアプリ情報を記載しzip形式で圧縮して.pa拡張子にします
+appinfo.ini Pibraryがアプリを管理するためにインストール時に読み取る情報が書かれているファイルです
+1 2 3 4 5 6 [識別子] name = アプリ名 developer = 開発者名 description = 詳細 icon = iconURL identifier = 識別子 Download Pibrary public beta(PB) Download Ver 1.0PB
+Pibrary stable しばらくお待ちください'>
+<meta property='og:url' content='https://www.amania-tools.com/pibrary/'>
 <meta property='og:site_name' content='amania Tools'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' />
-<meta name="twitter:title" content="Notification">
-<meta name="twitter:description" content="お知らせ">
+<meta property='og:type' content='article'><meta property='article:section' content='' /><meta property='article:tag' content='Python' /><meta property='article:tag' content='CasioTweaks' /><meta property='article:tag' content='Software' /><meta property='article:published_time' content='2022-12-31T15:14:55&#43;09:00'/><meta property='article:modified_time' content='2022-12-31T15:14:55&#43;09:00'/><meta property='og:image' content='https://github.com/amania-Jailbreak/amania-jailbreak.github.io/raw/main/Pibrary-Hed.png' />
+<meta name="twitter:title" content="Pibrary">
+<meta name="twitter:description" content="PibraryとはPythonで作成されたビルドされていないOSSソフトウェアを動かすためのソフトになります Pibraryを使用すれば
+Pythonでビルド(exeにコンパイル)などをせずに配布することができます Pythonの仮想環境もどきが作れます(アプリケーションごとに環境が生成されその中にモジュールがインストールされます 仮想環境のみでは使用できません) PibraryにはPython3.10 pipが同梱されておりモジュールは標準の状態から手を加えておらず Pibraryに必要なモジュールは別の場所に隔離されていますのでPythonにほかのモジュールはインストールされていません
+仕組み PibraryはEelとElectronによって実現しています .pa拡張子をアプリ内で指定しインストールするとpaの中にあるtxtファイルからモジュールをそのアプリ専用のフォルダにインストールしアプリを実行するときはそこからモジュールをインポートするように指定しますインストールしたフォルダ内にあるmain.pyのmain関数を実行します(main関数はなくても大丈夫ですがPibrary内部でエラーが発生します 支障はありません) (Pibrary本体もビルドされていないため簡略化した方法で同じように起動します)
+paファイル Pibraryにpaファイルを使用してアプリケーションをインストールします
+1 2 3 4 [appname].pa |- [app-identifier] (appfoldername) |- appinfo.ini (App information) |- requirements.txt (Required modules) このようなフォルダ構造になっておりapp-identifierにはappinfoに記述したidentifierと同じ名前にします この中にアプリ本体を配置しモジュールとアプリ情報を記載しzip形式で圧縮して.pa拡張子にします
+appinfo.ini Pibraryがアプリを管理するためにインストール時に読み取る情報が書かれているファイルです
+1 2 3 4 5 6 [識別子] name = アプリ名 developer = 開発者名 description = 詳細 icon = iconURL identifier = 識別子 Download Pibrary public beta(PB) Download Ver 1.0PB
+Pibrary stable しばらくお待ちください"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://github.com/amania-Jailbreak/amania-jailbreak.github.io/raw/main/Pibrary-Hed.png' />
     </head>
     <body class="
     article-page
@@ -175,7 +197,7 @@
         
         
 
-        <li  class='current' >
+        <li >
             <a href='/notification/' >
                 
                 
@@ -282,26 +304,43 @@
     </ol>
 </aside>
 <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/pibrary/">
+                
+                    <img src="https://github.com/amania-Jailbreak/amania-jailbreak.github.io/raw/main/Pibrary-Hed.png" loading="lazy" alt="Featured image of post Pibrary" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/notification/">Notification</a>
+            <a href="/pibrary/">Pibrary</a>
         </h2>
     
-        
-        <h3 class="article-subtitle">
-            お知らせ
-        </h3>
         
     </div>
 
     
     <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 31, 2022</time>
+            </div>
         
 
         
@@ -315,7 +354,7 @@
 
 
                 <time class="article-time--reading">
-                    読了時間: 0分
+                    読了時間: 1分
                 </time>
             </div>
         
@@ -329,12 +368,77 @@
     <section class="article-content">
     
     
-    
+    <p>PibraryとはPythonで作成されたビルドされていないOSSソフトウェアを動かすためのソフトになります
+Pibraryを使用すれば</p>
+<ul>
+<li>Pythonでビルド(exeにコンパイル)などをせずに配布することができます</li>
+<li>Pythonの仮想環境もどきが作れます(アプリケーションごとに環境が生成されその中にモジュールがインストールされます 仮想環境のみでは使用できません)</li>
+</ul>
+<p>PibraryにはPython3.10 pipが同梱されておりモジュールは標準の状態から手を加えておらず
+Pibraryに必要なモジュールは別の場所に隔離されていますのでPythonにほかのモジュールはインストールされていません</p>
+<h2 id="仕組み">仕組み</h2>
+<p>PibraryはEelとElectronによって実現しています
+.pa拡張子をアプリ内で指定しインストールするとpaの中にあるtxtファイルからモジュールをそのアプリ専用のフォルダにインストールしアプリを実行するときはそこからモジュールをインポートするように指定しますインストールしたフォルダ内にあるmain.pyのmain関数を実行します(main関数はなくても大丈夫ですがPibrary内部でエラーが発生します 支障はありません)
+(Pibrary本体もビルドされていないため簡略化した方法で同じように起動します)</p>
+<h2 id="paファイル">paファイル</h2>
+<p>Pibraryにpaファイルを使用してアプリケーションをインストールします</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[appname].pa
+</span></span><span class="line"><span class="cl"> |- [app-identifier] (appfoldername)
+</span></span><span class="line"><span class="cl"> |- appinfo.ini (App information)
+</span></span><span class="line"><span class="cl"> |- requirements.txt (Required modules)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>このようなフォルダ構造になっておりapp-identifierにはappinfoに記述したidentifierと同じ名前にします この中にアプリ本体を配置しモジュールとアプリ情報を記載しzip形式で圧縮して.pa拡張子にします</p>
+<h2 id="appinfoini">appinfo.ini</h2>
+<p>Pibraryがアプリを管理するためにインストール時に読み取る情報が書かれているファイルです</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[識別子]
+</span></span><span class="line"><span class="cl">name = アプリ名
+</span></span><span class="line"><span class="cl">developer = 開発者名
+</span></span><span class="line"><span class="cl">description = 詳細
+</span></span><span class="line"><span class="cl">icon = iconURL
+</span></span><span class="line"><span class="cl">identifier = 識別子
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="download">Download</h2>
+<h3 id="pibrary-public-betapb">Pibrary public beta(PB)</h3>
+<p><a class="link" href="https://bowlroll.net/file/287289"  target="_blank" rel="noopener"
+    >Download Ver 1.0PB</a></p>
+<h3 id="pibrary-stable">Pibrary stable</h3>
+<p>しばらくお待ちください</p>
+
 </section>
 
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/python/">Python</a>
+        
+            <a href="/tags/casiotweaks/">CasioTweaks</a>
+        
+            <a href="/tags/software/">Software</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -354,25 +458,6 @@
     
 </article>
 
-    
-        <div class="article-list--compact links">
-    
-        <article>
-            <a href="" target="_blank" rel="noopener">
-                <div class="article-details">
-                    <h2 class="article-title">特になし</h2>
-                    <footer class="article-time">
-                        
-                            サイトをリニューアルしました 見やすいでしょたぶん
-                        
-                    </footer>
-                </div>
-        
-                
-            </a>
-        </article>
-    
-</div>
     
 
     
@@ -519,7 +604,46 @@
             >
 
             </main>
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#仕組み">仕組み</a></li>
+    <li><a href="#paファイル">paファイル</a></li>
+    <li><a href="#appinfoini">appinfo.ini</a></li>
+    <li><a href="#download">Download</a>
+      <ol>
+        <li><a href="#pibrary-public-betapb">Pibrary public beta(PB)</a></li>
+        <li><a href="#pibrary-stable">Pibrary stable</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
         </div>
         <script 

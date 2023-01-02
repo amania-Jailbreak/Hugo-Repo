@@ -1,8 +1,7 @@
 ---
 title: "Pibrary"
 date: 2022-12-31T15:14:55+09:00
-draft: true
-image: https://github.com/amania-Jailbreak/amania-jailbreak.github.io/raw/main/Pibrary-Hed.png
+image: https://github.com/amania-Jailbreak/amania-jailbreak.github.io/raw/master/Pibrary-Hed.png
 author: "amania"
 tags: ["Python", "CasioTweaks","Software"]
 ---

@@ -3,7 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.amania-tools.com/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <lastmod>2022-12-31T15:14:55+09:00</lastmod>
+  </url><url>
+    <loc>https://www.amania-tools.com/tags/casiotweaks/</loc>
+    <lastmod>2022-12-31T15:14:55+09:00</lastmod>
+  </url><url>
+    <loc>https://www.amania-tools.com/pibrary/</loc>
+    <lastmod>2022-12-31T15:14:55+09:00</lastmod>
+  </url><url>
+    <loc>https://www.amania-tools.com/tags/python/</loc>
+    <lastmod>2022-12-31T15:14:55+09:00</lastmod>
+  </url><url>
+    <loc>https://www.amania-tools.com/tags/software/</loc>
+    <lastmod>2022-12-31T15:14:55+09:00</lastmod>
+  </url><url>
+    <loc>https://www.amania-tools.com/tags/</loc>
+    <lastmod>2022-12-31T15:14:55+09:00</lastmod>
   </url><url>
     <loc>https://www.amania-tools.com/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
@@ -23,7 +38,5 @@
     <loc>https://www.amania-tools.com/notification/</loc>
   </url><url>
     <loc>https://www.amania-tools.com/search/</loc>
-  </url><url>
-    <loc>https://www.amania-tools.com/tags/</loc>
   </url>
 </urlset>
