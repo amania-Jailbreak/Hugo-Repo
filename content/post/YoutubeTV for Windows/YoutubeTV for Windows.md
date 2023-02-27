@@ -12,10 +12,14 @@ It is possible to connect and control from YoutubeClient such as smart phones.
 When you launch this exe file, YoutubeTV will be launched in full screen.
 Usage is the same as the stock youtubeTV.
 
+## Updated to 1.1.0
+Use the F11 key to toggle between windowed and full screen mode
+In windowed mode, the window is always in the foreground and can be used as a picture-in-picture.
+
 ## Download
 
 ### Windows
 [Download](https://bowlroll.net/file/295370)
 
-### SteamDeck
+### SteamDeck(Linux)
 Coming soon....
